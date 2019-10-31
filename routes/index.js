@@ -44,4 +44,17 @@ router.get('/openApp',function (req,res,next) {
     res.redirect('GFApp://');
 });
 
+router.get('/getData',function (req,res,next) {
+    var json = {
+        'version' : '2.0.5',
+        'success' : 'yes'
+    }
+   res.send(json);
+
+});
+
+router.get('/public/movie',function(req,res,next){
+    res.sendfile('/Users/deven/Desktop/Github/koloa/GFWebService/public/movie/1.mp4');
+});
+
 module.exports = router;
